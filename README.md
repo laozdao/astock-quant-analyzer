@@ -2,9 +2,10 @@
 
 > 基于"双引擎四层"融合模型的 A股个股量化分析 Skill，一句话触发，3 分钟输出专业级投资分析报告。
 
-[![SOLO Skill](https://img.shields.io/badge/SOLO-Skill-blue)]()
+[![SOLO Skill](https://img.shields.io/badge/SOLO-Skill-blue)](https://github.com/laozdao/astock-quant-analyzer/releases)
 [![Python](https://img.shields.io/badge/Python-3.8+-green)]()
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Release](https://img.shields.io/badge/Release-v1.0.0-orange)](https://github.com/laozdao/astock-quant-analyzer/releases/tag/v1.0.0)
 
 ## ✨ 特性
 
@@ -16,27 +17,52 @@
 - 🧩 **经典框架适配**：自动匹配价值选股、困境反转、成长股PEG、动量趋势模型
 - 📋 **十大章节报告**：从基本信息到风险提示，结构化输出完整分析报告
 
+## 📦 下载安装
+
+### 方式一：从 Release 下载（推荐）
+
+直接下载打包好的 Skill 文件，一键导入即可使用：
+
+👉 **[下载 astock-quant-analyzer.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.0.0/astock-quant-analyzer.skill)**
+
+### 方式二：从源码安装
+
+```bash
+git clone https://github.com/laozdao/astock-quant-analyzer.git
+cd astock-quant-analyzer
+pip install -r requirements.txt
+```
+
+## 💻 支持的软件
+
+本 Skill 可在以下 AI 助手软件中使用：
+
+| 软件 | 说明 |
+|------|------|
+| **[Trae](https://trae.cn/)** | 字节跳动 AI 编程助手，支持 Skill 导入 |
+| **[SOLO](https://solo.trae.cn/)** | 通用 AI 助手，支持 Skill 导入 |
+| **[Cursor](https://cursor.sh/)** | AI 编程助手，可通过 .cursorrules 适配 |
+| **[Windsurf](https://codeium.com/windsurf)** | Codeium AI 编程助手 |
+| **[Cline](https://github.com/cline/cline)** | VS Code AI 插件，支持自定义规则 |
+
+> 💡 **提示**：Trae 和 SOLO 原生支持 `.skill` 文件导入，其他软件可能需要手动适配。
+
 ## 🚀 快速开始
 
 ### 前置条件
 
-- Python 3.8+
-- 安装 [SOLO](https://solo.trae.cn/) 客户端（可选，用于使用 Skill 版本）
-
-### 安装
-
-```bash
-# 克隆仓库
-git clone https://github.com/laozdao/astock-quant-analyzer.git
-cd astock-quant-analyzer
-
-# 安装依赖（如有）
-pip install -r requirements.txt
-```
+- Python 3.8+（使用源码方式时）
+- 安装 [Trae](https://trae.cn/) 或 [SOLO](https://solo.trae.cn/) 客户端（推荐）
 
 ### 使用方法
 
-#### 方式一：使用 Python 源码
+#### 方式一：使用 Skill 文件（推荐）
+
+1. 下载 [astock-quant-analyzer.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.0.0/astock-quant-analyzer.skill)
+2. 在 Trae/SOLO 中导入 Skill
+3. 直接使用：`分析一下贵州茅台`
+
+#### 方式二：使用 Python 源码
 
 ```python
 from src.analyzer import AStockQuantAnalyzer, MarketCondition
@@ -58,12 +84,6 @@ fundamental_data = {
 fundamental_score = analyzer.calculate_fundamental_score(fundamental_data)
 print(f"基本面评分: {fundamental_score.total_score}")
 ```
-
-#### 方式二：使用 SOLO Skill
-
-1. 下载 `skill/SKILL.md` 文件
-2. 在 SOLO 中导入 Skill
-3. 直接使用：`分析一下贵州茅台`
 
 ## 📐 模型架构
 
