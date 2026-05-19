@@ -39,13 +39,15 @@ pip install -r requirements.txt
 
 | 软件 | 说明 |
 |------|------|
-| **[Trae](https://trae.cn/)** | 字节跳动 AI 编程助手，支持 Skill 导入 |
-| **[SOLO](https://solo.trae.cn/)** | 通用 AI 助手，支持 Skill 导入 |
+| **[SOLO](https://solo.trae.cn/)** | 通用 AI 助手，原生支持 Skill 导入 |
+| **[Trae](https://trae.cn/)** | 字节跳动 AI 编程助手，原生支持 Skill 导入 |
+| **[Claude Code](https://www.anthropic.com/claude)** | Anthropic 官方 AI 编程助手 |
+| **[Codex](https://openai.com/index/introducing-codex/)** | OpenAI 代码生成模型 |
 | **[Cursor](https://cursor.sh/)** | AI 编程助手，可通过 .cursorrules 适配 |
 | **[Windsurf](https://codeium.com/windsurf)** | Codeium AI 编程助手 |
 | **[Cline](https://github.com/cline/cline)** | VS Code AI 插件，支持自定义规则 |
 
-> 💡 **提示**：Trae 和 SOLO 原生支持 `.skill` 文件导入，其他软件可能需要手动适配。
+> 💡 **提示**：SOLO 和 Trae 原生支持 `.skill` 文件导入，其他软件可能需要手动适配。
 
 ## 🚀 快速开始
 
