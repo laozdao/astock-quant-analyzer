@@ -5,7 +5,7 @@
 [![SOLO Skill](https://img.shields.io/badge/SOLO-Skill-blue)](https://github.com/laozdao/astock-quant-analyzer/releases)
 [![Python](https://img.shields.io/badge/Python-3.8+-green)]()
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Release](https://img.shields.io/badge/Release-v1.0.0-orange)](https://github.com/laozdao/astock-quant-analyzer/releases/tag/v1.0.0)
+[![Release](https://img.shields.io/badge/Release-v1.1.0-orange)](https://github.com/laozdao/astock-quant-analyzer/releases/tag/v1.1.0)
 
 ## ✨ 特性
 
@@ -23,7 +23,15 @@
 
 直接下载打包好的 Skill 文件，一键导入即可使用：
 
-👉 **[下载 astock-quant-analyzer.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.0.0/astock-quant-analyzer.skill)**
+| 版本 | 说明 | 下载 |
+|------|------|------|
+| **v1.1.0** | HTML 报告版（推荐） | [下载 astock-quant-analyzer-html.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.1.0/astock-quant-analyzer-html.skill) |
+| v1.0.0 | Markdown 报告版 | [下载 astock-quant-analyzer.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.0.0/astock-quant-analyzer.skill) |
+
+#### 版本区别
+
+- **HTML 报告版 (v1.1.0)**：生成精美的 HTML 可视化报告，支持图表、进度条、交互式展示
+- **Markdown 报告版 (v1.0.0)**：生成 Markdown 格式文本报告
 
 ### 方式二：从源码安装
 
@@ -60,7 +68,7 @@ pip install -r requirements.txt
 
 #### 方式一：使用 Skill 文件（推荐）
 
-1. 下载 [astock-quant-analyzer.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.0.0/astock-quant-analyzer.skill)
+1. 下载最新版本 [astock-quant-analyzer-html.skill](https://github.com/laozdao/astock-quant-analyzer/releases/download/v1.1.0/astock-quant-analyzer-html.skill)（HTML 报告版）
 2. 在 Trae/SOLO 中导入 Skill
 3. 直接使用：`分析一下贵州茅台`
 
@@ -97,21 +105,22 @@ print(f"基本面评分: {fundamental_score.total_score}")
 
 ```
 astock-quant-analyzer/
-├── src/                      # 源码目录
-│   ├── config.py            # 模型配置
-│   ├── analyzer.py          # 核心分析引擎
+├── astock-quant-analyzer-html.skill   # HTML 报告版 Skill 文件（可直接下载使用）
+├── src/                               # 源码目录
+│   ├── config.py                     # 模型配置
+│   ├── analyzer.py                   # 核心分析引擎
 │   └── __init__.py
-├── skill/                    # SOLO Skill 文件
-│   └── SKILL.md             # Skill 定义文件
-├── docs/                     # 文档目录
-│   └── architecture.md      # 架构设计文档
-├── examples/                 # 示例
-│   └── sample_report.md     # 示例分析报告
-├── tests/                    # 测试
+├── skill/                             # SOLO Skill 文件
+│   └── SKILL.md                      # Skill 定义文件
+├── docs/                              # 文档目录
+│   └── architecture.md               # 架构设计文档
+├── examples/                          # 示例
+│   └── sample_report.md              # 示例分析报告
+├── tests/                             # 测试
 │   └── test_analyzer.py
-├── README.md                 # 本文件
-├── LICENSE                   # MIT 协议
-└── requirements.txt          # 依赖
+├── README.md                          # 本文件
+├── LICENSE                            # MIT 协议
+└── requirements.txt                   # 依赖
 ```
 
 ## 📄 开源协议
